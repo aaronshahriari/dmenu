@@ -11,20 +11,20 @@ static const char *fonts[] = {
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 
-static const char black[]           = "#000000";
-static const char white[]           = "#FFFFFF";
-static const char light_grey[]      = "#BBBBBB";
-static const char main_col[]        = "#aaf0d1"; /* mint */
+static const char sel_bg[]        = "#3a3a3a";
+static const char sel_fg[]        = "#000000";
+static const char unsel_bg[]        = "#121212";
+static const char unsel_fg[]        = "#bfbfbf";
 
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { main_col, black },
-	[SchemeSel] = { black, main_col },
+	[SchemeNorm] = { unsel_fg, unsel_bg },
+	[SchemeSel] = { sel_fg, sel_bg },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 8;
-static unsigned int columns    = 1;
+static unsigned int columns    = 2;
 
 /*
  * Characters not considered part of a word while deleting words
