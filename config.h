@@ -14,7 +14,9 @@ static const char *prompt      = NULL;      /* -p  option; prompt to the left of
 static const char unsel_bg[]        = "#000000";
 static const char unsel_fg[]        = "#ffffff";
 static const char sel_fg[]        = "#000000";
-static const char sel_tag[]        = "#67A86C";
+/*green colorscheme*/
+/*static const char sel_tag[]        = "#67A86C";*/
+static const char sel_tag[]        = "#ffffff";
 
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
