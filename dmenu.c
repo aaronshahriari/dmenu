@@ -98,10 +98,11 @@ calcoffsets(void)
 static int
 max_textw(void)
 {
-	int len = 0;
-	for (struct item *item = items; item && item->text; item++)
-		len = MAX(TEXTW(item->text), len);
-	return len;
+    int len = 0;
+    for (struct item *item = items; item && item->text; item++)
+        len = MAX(TEXTW(item->text) * (columns == 0 ? 1 : columns), len);
+    len = MIN(len, <defined max lenght>);
+    return len;
 }
 
 static void
